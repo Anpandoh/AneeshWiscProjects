@@ -1,0 +1,2 @@
+cipher :ABCDEFGHIJKL;.&@^abc
+plain:abcdefghijkl:!$%^ABC

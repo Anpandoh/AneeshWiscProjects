@@ -1,0 +1,7 @@
+( 2 ) Apple
+( 1 ) Milk
+( 1 )
+( one ) Chocolate
+( 3 ) Pizza
+( 1 ) Orange
+( 1 ) Grape

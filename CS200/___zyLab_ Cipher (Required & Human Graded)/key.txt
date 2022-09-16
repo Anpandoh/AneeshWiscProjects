@@ -1,0 +1,2 @@
+cipher:dc!fghijklmpqrtnosuvwxyz. :e-ba
+plain :abcdefghijklmnopqrstuvwxyz. :!-
