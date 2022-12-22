@@ -1,0 +1,86 @@
+==1485147== Memcheck, a memory error detector
+==1485147== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1485147== Using Valgrind-3.18.1-42b08ed5bd-20211015 and LibVEX; rerun with -h for copyright info
+==1485147== Command: ./myMagicSquare outputfile.txt
+==1485147== Parent PID: 1452361
+==1485147== 
+--1485147-- 
+--1485147-- Valgrind options:
+--1485147--    --leak-check=full
+--1485147--    --show-leak-kinds=all
+--1485147--    --track-origins=yes
+--1485147--    --verbose
+--1485147--    --log-file=valgrind-out.txt
+--1485147-- Contents of /proc/version:
+--1485147--   Linux version 5.15.0-48-generic (buildd@lcy02-amd64-080) (gcc (Ubuntu 11.2.0-19ubuntu1) 11.2.0, GNU ld (GNU Binutils for Ubuntu) 2.38) #54-Ubuntu SMP Fri Aug 26 13:26:29 UTC 2022
+--1485147-- 
+--1485147-- Arch and hwcaps: X86, LittleEndian, x86-mmxext-sse1-sse2-sse3-lzcnt
+--1485147-- Page sizes: currently 4096, max supported 4096
+--1485147-- Valgrind library directory: /usr/libexec/valgrind
+--1485147-- Reading syms from /home/pandoh/private/cs354/p2b/myMagicSquare
+--1485147-- Reading syms from /usr/lib/i386-linux-gnu/ld-linux.so.2
+--1485147--   Considering /usr/lib/debug/.build-id/3b/14298a04c7ebabd8a16e9554e847e481946a1c.debug ..
+--1485147--   .. build-id is valid
+--1485147-- Reading syms from /usr/libexec/valgrind/memcheck-x86-linux
+--1485147--    object doesn't have a symbol table
+--1485147--    object doesn't have a dynamic symbol table
+--1485147-- Scheduler: using generic scheduler lock implementation.
+--1485147-- Reading suppressions file: /usr/libexec/valgrind/default.supp
+==1485147== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-1485147-by-pandoh-on-
+==1485147== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-1485147-by-pandoh-on-
+==1485147== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-1485147-by-pandoh-on-
+==1485147== 
+==1485147== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==1485147== don't want to do, unless you know exactly what you're doing,
+==1485147== or are doing some strange experiment):
+==1485147==   /usr/bin/vgdb --pid=1485147 ...command...
+==1485147== 
+==1485147== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==1485147==   /path/to/gdb ./myMagicSquare
+==1485147== and then give GDB the following command
+==1485147==   target remote | /usr/bin/vgdb --pid=1485147
+==1485147== --pid is optional if only one valgrind process is running
+==1485147== 
+--1485147-- REDIR: 0x4024cf0 (ld-linux.so.2:strlen) redirected to 0x580b8f1d (???)
+--1485147-- REDIR: 0x4024a30 (ld-linux.so.2:index) redirected to 0x580b8ef8 (???)
+--1485147-- Reading syms from /usr/libexec/valgrind/vgpreload_core-x86-linux.so
+--1485147--    object doesn't have a symbol table
+--1485147-- Reading syms from /usr/libexec/valgrind/vgpreload_memcheck-x86-linux.so
+--1485147--    object doesn't have a symbol table
+==1485147== WARNING: new redirection conflicts with existing -- ignoring it
+--1485147--     old: 0x04024cf0 (strlen              ) R-> (0000.0) 0x580b8f1d ???
+--1485147--     new: 0x04024cf0 (strlen              ) R-> (2007.0) 0x04849640 strlen
+--1485147-- Reading syms from /usr/lib/i386-linux-gnu/libc.so.6
+--1485147--   Considering /usr/lib/debug/.build-id/04/94f075afbcfa9004eaaedccbea53807b7bf669.debug ..
+--1485147--   .. build-id is valid
+==1485147== WARNING: new redirection conflicts with existing -- ignoring it
+--1485147--     old: 0x0490b270 (memalign            ) R-> (1011.0) 0x04848960 memalign
+--1485147--     new: 0x0490b270 (memalign            ) R-> (1017.0) 0x04848910 aligned_alloc
+==1485147== WARNING: new redirection conflicts with existing -- ignoring it
+--1485147--     old: 0x0490b270 (memalign            ) R-> (1011.0) 0x04848960 memalign
+--1485147--     new: 0x0490b270 (memalign            ) R-> (1017.0) 0x048488c0 aligned_alloc
+==1485147== WARNING: new redirection conflicts with existing -- ignoring it
+--1485147--     old: 0x0490b270 (memalign            ) R-> (1011.0) 0x04848960 memalign
+--1485147--     new: 0x0490b270 (memalign            ) R-> (1017.0) 0x04848910 aligned_alloc
+==1485147== WARNING: new redirection conflicts with existing -- ignoring it
+--1485147--     old: 0x0490b270 (memalign            ) R-> (1011.0) 0x04848960 memalign
+--1485147--     new: 0x0490b270 (memalign            ) R-> (1017.0) 0x048488c0 aligned_alloc
+--1485147-- REDIR: 0x4927ac0 (libc.so.6:wcslen) redirected to 0x483b250 (_vgnU_ifunc_wrapper)
+--1485147-- REDIR: 0x4914270 (libc.so.6:memrchr) redirected to 0x483b250 (_vgnU_ifunc_wrapper)
+--1485147-- REDIR: 0x490e1a0 (libc.so.6:strncasecmp) redirected to 0x483b250 (_vgnU_ifunc_wrapper)
+--1485147-- REDIR: 0x4927100 (libc.so.6:__GI_strrchr) redirected to 0x48490d0 (__GI_strrchr)
+--1485147-- REDIR: 0x49275c0 (libc.so.6:__GI_strlen) redirected to 0x48495c0 (__GI_strlen)
+--1485147-- REDIR: 0x490a820 (libc.so.6:malloc) redirected to 0x4843630 (malloc)
+--1485147-- REDIR: 0x490b430 (libc.so.6:calloc) redirected to 0x48482b0 (calloc)
+--1485147-- REDIR: 0x490da60 (libc.so.6:strstr) redirected to 0x484df10 (strstr)
+--1485147-- REDIR: 0x490fb20 (libc.so.6:strchrnul) redirected to 0x484d860 (strchrnul)
+--1485147-- REDIR: 0x4926ce0 (libc.so.6:__GI_mempcpy) redirected to 0x484da90 (__GI_mempcpy)
+--1485147-- REDIR: 0x490ab10 (libc.so.6:free) redirected to 0x4845e80 (free)
+==1485147== 
+==1485147== HEAP SUMMARY:
+==1485147==     in use at exit: 0 bytes in 0 blocks
+==1485147==   total heap usage: 9 allocs, 9 frees, 6,504 bytes allocated
+==1485147== 
+==1485147== All heap blocks were freed -- no leaks are possible
+==1485147== 
+==1485147== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

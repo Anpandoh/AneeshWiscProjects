@@ -1,0 +1,138 @@
+==467309== Memcheck, a memory error detector
+==467309== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==467309== Using Valgrind-3.18.1-42b08ed5bd-20211015 and LibVEX; rerun with -h for copyright info
+==467309== Command: ./check_board board3.txt
+==467309== Parent PID: 461116
+==467309== 
+--467309-- 
+--467309-- Valgrind options:
+--467309--    --leak-check=full
+--467309--    --show-leak-kinds=all
+--467309--    --track-origins=yes
+--467309--    --verbose
+--467309--    --log-file=valgrind-out.txt
+--467309-- Contents of /proc/version:
+--467309--   Linux version 5.15.0-48-generic (buildd@lcy02-amd64-080) (gcc (Ubuntu 11.2.0-19ubuntu1) 11.2.0, GNU ld (GNU Binutils for Ubuntu) 2.38) #54-Ubuntu SMP Fri Aug 26 13:26:29 UTC 2022
+--467309-- 
+--467309-- Arch and hwcaps: X86, LittleEndian, x86-mmxext-sse1-sse2-sse3-lzcnt
+--467309-- Page sizes: currently 4096, max supported 4096
+--467309-- Valgrind library directory: /usr/libexec/valgrind
+--467309-- Reading syms from /home/pandoh/private/cs354/p2/check_board
+--467309-- Reading syms from /usr/lib/i386-linux-gnu/ld-linux.so.2
+--467309--   Considering /usr/lib/debug/.build-id/3b/14298a04c7ebabd8a16e9554e847e481946a1c.debug ..
+--467309--   .. build-id is valid
+--467309-- Reading syms from /usr/libexec/valgrind/memcheck-x86-linux
+--467309--    object doesn't have a symbol table
+--467309--    object doesn't have a dynamic symbol table
+--467309-- Scheduler: using generic scheduler lock implementation.
+--467309-- Reading suppressions file: /usr/libexec/valgrind/default.supp
+==467309== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-467309-by-pandoh-on-
+==467309== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-467309-by-pandoh-on-
+==467309== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-467309-by-pandoh-on-
+==467309== 
+==467309== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==467309== don't want to do, unless you know exactly what you're doing,
+==467309== or are doing some strange experiment):
+==467309==   /usr/bin/vgdb --pid=467309 ...command...
+==467309== 
+==467309== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==467309==   /path/to/gdb ./check_board
+==467309== and then give GDB the following command
+==467309==   target remote | /usr/bin/vgdb --pid=467309
+==467309== --pid is optional if only one valgrind process is running
+==467309== 
+--467309-- REDIR: 0x4024cf0 (ld-linux.so.2:strlen) redirected to 0x580b8f1d (???)
+--467309-- REDIR: 0x4024a30 (ld-linux.so.2:index) redirected to 0x580b8ef8 (???)
+--467309-- Reading syms from /usr/libexec/valgrind/vgpreload_core-x86-linux.so
+--467309--    object doesn't have a symbol table
+--467309-- Reading syms from /usr/libexec/valgrind/vgpreload_memcheck-x86-linux.so
+--467309--    object doesn't have a symbol table
+==467309== WARNING: new redirection conflicts with existing -- ignoring it
+--467309--     old: 0x04024cf0 (strlen              ) R-> (0000.0) 0x580b8f1d ???
+--467309--     new: 0x04024cf0 (strlen              ) R-> (2007.0) 0x04849640 strlen
+--467309-- Reading syms from /usr/lib/i386-linux-gnu/libc.so.6
+--467309--   Considering /usr/lib/debug/.build-id/04/94f075afbcfa9004eaaedccbea53807b7bf669.debug ..
+--467309--   .. build-id is valid
+==467309== WARNING: new redirection conflicts with existing -- ignoring it
+--467309--     old: 0x0490b270 (memalign            ) R-> (1011.0) 0x04848960 memalign
+--467309--     new: 0x0490b270 (memalign            ) R-> (1017.0) 0x04848910 aligned_alloc
+==467309== WARNING: new redirection conflicts with existing -- ignoring it
+--467309--     old: 0x0490b270 (memalign            ) R-> (1011.0) 0x04848960 memalign
+--467309--     new: 0x0490b270 (memalign            ) R-> (1017.0) 0x048488c0 aligned_alloc
+==467309== WARNING: new redirection conflicts with existing -- ignoring it
+--467309--     old: 0x0490b270 (memalign            ) R-> (1011.0) 0x04848960 memalign
+--467309--     new: 0x0490b270 (memalign            ) R-> (1017.0) 0x04848910 aligned_alloc
+==467309== WARNING: new redirection conflicts with existing -- ignoring it
+--467309--     old: 0x0490b270 (memalign            ) R-> (1011.0) 0x04848960 memalign
+--467309--     new: 0x0490b270 (memalign            ) R-> (1017.0) 0x048488c0 aligned_alloc
+--467309-- REDIR: 0x4927ac0 (libc.so.6:wcslen) redirected to 0x483b250 (_vgnU_ifunc_wrapper)
+--467309-- REDIR: 0x4914270 (libc.so.6:memrchr) redirected to 0x483b250 (_vgnU_ifunc_wrapper)
+--467309-- REDIR: 0x490e1a0 (libc.so.6:strncasecmp) redirected to 0x483b250 (_vgnU_ifunc_wrapper)
+--467309-- REDIR: 0x4927100 (libc.so.6:__GI_strrchr) redirected to 0x48490d0 (__GI_strrchr)
+--467309-- REDIR: 0x490a820 (libc.so.6:malloc) redirected to 0x4843630 (malloc)
+--467309-- REDIR: 0x490da60 (libc.so.6:strstr) redirected to 0x484df10 (strstr)
+--467309-- REDIR: 0x4926730 (libc.so.6:__GI_memchr) redirected to 0x484a670 (__GI_memchr)
+--467309-- REDIR: 0x4926bd0 (libc.so.6:__GI_memcpy) redirected to 0x484b060 (__GI_memcpy)
+--467309-- REDIR: 0x4927380 (libc.so.6:__GI_strcspn) redirected to 0x484e250 (__GI_strcspn)
+--467309-- REDIR: 0x490ab10 (libc.so.6:free) redirected to 0x4845e80 (free)
+==467309== Conditional jump or move depends on uninitialised value(s)
+==467309==    at 0x109417: valid_board (in /home/pandoh/private/cs354/p2/check_board)
+==467309==    by 0x109817: main (in /home/pandoh/private/cs354/p2/check_board)
+==467309==  Uninitialised value was created by a heap allocation
+==467309==    at 0x48436A0: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-x86-linux.so)
+==467309==    by 0x109356: valid_board (in /home/pandoh/private/cs354/p2/check_board)
+==467309==    by 0x109817: main (in /home/pandoh/private/cs354/p2/check_board)
+==467309== 
+==467309== Conditional jump or move depends on uninitialised value(s)
+==467309==    at 0x109572: valid_board (in /home/pandoh/private/cs354/p2/check_board)
+==467309==    by 0x109817: main (in /home/pandoh/private/cs354/p2/check_board)
+==467309==  Uninitialised value was created by a heap allocation
+==467309==    at 0x48436A0: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-x86-linux.so)
+==467309==    by 0x10950F: valid_board (in /home/pandoh/private/cs354/p2/check_board)
+==467309==    by 0x109817: main (in /home/pandoh/private/cs354/p2/check_board)
+==467309== 
+--467309-- REDIR: 0x49275c0 (libc.so.6:__GI_strlen) redirected to 0x48495c0 (__GI_strlen)
+--467309-- REDIR: 0x4926ce0 (libc.so.6:__GI_mempcpy) redirected to 0x484da90 (__GI_mempcpy)
+==467309== 
+==467309== HEAP SUMMARY:
+==467309==     in use at exit: 120 bytes in 1 blocks
+==467309==   total heap usage: 25 allocs, 24 frees, 6,384 bytes allocated
+==467309== 
+==467309== Searching for pointers to 1 not-freed blocks
+==467309== Checked 71,408 bytes
+==467309== 
+==467309== 120 bytes in 1 blocks are possibly lost in loss record 1 of 1
+==467309==    at 0x48436A0: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-x86-linux.so)
+==467309==    by 0x48E4472: getdelim (iogetdelim.c:62)
+==467309==    by 0x48CA8E9: getline (getline.c:28)
+==467309==    by 0x10973A: main (in /home/pandoh/private/cs354/p2/check_board)
+==467309== 
+==467309== LEAK SUMMARY:
+==467309==    definitely lost: 0 bytes in 0 blocks
+==467309==    indirectly lost: 0 bytes in 0 blocks
+==467309==      possibly lost: 120 bytes in 1 blocks
+==467309==    still reachable: 0 bytes in 0 blocks
+==467309==         suppressed: 0 bytes in 0 blocks
+==467309== 
+==467309== ERROR SUMMARY: 36 errors from 3 contexts (suppressed: 0 from 0)
+==467309== 
+==467309== 2 errors in context 1 of 3:
+==467309== Conditional jump or move depends on uninitialised value(s)
+==467309==    at 0x109572: valid_board (in /home/pandoh/private/cs354/p2/check_board)
+==467309==    by 0x109817: main (in /home/pandoh/private/cs354/p2/check_board)
+==467309==  Uninitialised value was created by a heap allocation
+==467309==    at 0x48436A0: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-x86-linux.so)
+==467309==    by 0x10950F: valid_board (in /home/pandoh/private/cs354/p2/check_board)
+==467309==    by 0x109817: main (in /home/pandoh/private/cs354/p2/check_board)
+==467309== 
+==467309== 
+==467309== 33 errors in context 2 of 3:
+==467309== Conditional jump or move depends on uninitialised value(s)
+==467309==    at 0x109417: valid_board (in /home/pandoh/private/cs354/p2/check_board)
+==467309==    by 0x109817: main (in /home/pandoh/private/cs354/p2/check_board)
+==467309==  Uninitialised value was created by a heap allocation
+==467309==    at 0x48436A0: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-x86-linux.so)
+==467309==    by 0x109356: valid_board (in /home/pandoh/private/cs354/p2/check_board)
+==467309==    by 0x109817: main (in /home/pandoh/private/cs354/p2/check_board)
+==467309== 
+==467309== ERROR SUMMARY: 36 errors from 3 contexts (suppressed: 0 from 0)

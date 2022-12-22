@@ -1,0 +1,47 @@
+
+myMagicSquare.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <getSize>:
+   0:	55                   	push   %ebp
+   1:	89 e5                	mov    %esp,%ebp
+   3:	e8 fc ff ff ff       	call   4 <getSize+0x4>
+   8:	05 01 00 00 00       	add    $0x1,%eax
+   d:	b8 00 00 00 00       	mov    $0x0,%eax
+  12:	5d                   	pop    %ebp
+  13:	c3                   	ret    
+
+00000014 <generateMagicSquare>:
+  14:	55                   	push   %ebp
+  15:	89 e5                	mov    %esp,%ebp
+  17:	e8 fc ff ff ff       	call   18 <generateMagicSquare+0x4>
+  1c:	05 01 00 00 00       	add    $0x1,%eax
+  21:	b8 00 00 00 00       	mov    $0x0,%eax
+  26:	5d                   	pop    %ebp
+  27:	c3                   	ret    
+
+00000028 <fileOutputMagicSquare>:
+  28:	55                   	push   %ebp
+  29:	89 e5                	mov    %esp,%ebp
+  2b:	e8 fc ff ff ff       	call   2c <fileOutputMagicSquare+0x4>
+  30:	05 01 00 00 00       	add    $0x1,%eax
+  35:	90                   	nop
+  36:	5d                   	pop    %ebp
+  37:	c3                   	ret    
+
+00000038 <main>:
+  38:	55                   	push   %ebp
+  39:	89 e5                	mov    %esp,%ebp
+  3b:	e8 fc ff ff ff       	call   3c <main+0x4>
+  40:	05 01 00 00 00       	add    $0x1,%eax
+  45:	b8 00 00 00 00       	mov    $0x0,%eax
+  4a:	5d                   	pop    %ebp
+  4b:	c3                   	ret    
+
+Disassembly of section .text.__x86.get_pc_thunk.ax:
+
+00000000 <__x86.get_pc_thunk.ax>:
+   0:	8b 04 24             	mov    (%esp),%eax
+   3:	c3                   	ret    
