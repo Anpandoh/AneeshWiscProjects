@@ -1,0 +1,7 @@
+sleep 10.0
+##sleep 0.2
+##assertStat S sleep 10.0
+\x03
+##sleep 0.2
+##assertStat X sleep 10.0
+exit

@@ -1,0 +1,4 @@
+${PROMPT}${PROMPT}${PROMPT}${PROMPT}1: sleep 10.0
+2: sleep 10.1
+3: sleep 10.2
+${PROMPT}${PROMPT}${PROMPT}${PROMPT}

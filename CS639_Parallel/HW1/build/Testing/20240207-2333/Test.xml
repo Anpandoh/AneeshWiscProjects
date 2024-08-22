@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Linux-g++"
+	BuildStamp="20240207-2333-Experimental"
+	Name="snares-09"
+	Generator="ctest-3.28.3"
+	CompilerName="/usr/bin/g++"
+	CompilerVersion="11.4.0"
+	OSName="Linux"
+	Hostname="snares-09"
+	OSRelease="5.15.0-92-generic"
+	OSVersion="#102-Ubuntu SMP Wed Jan 10 09:33:48 UTC 2024"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="167"
+	ProcessorCacheSize="12288"
+	NumberOfLogicalCPU="12"
+	NumberOfPhysicalCPU="6"
+	TotalVirtualMemory="8191"
+	TotalPhysicalMemory="15714"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2700"
+	>
+	<Testing>
+		<StartDateTime>Feb 07 17:56 CST</StartDateTime>
+		<StartTestTime>1707350184</StartTestTime>
+		<TestList/>
+		<EndDateTime>Feb 07 17:56 CST</EndDateTime>
+		<EndTestTime>1707350184</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

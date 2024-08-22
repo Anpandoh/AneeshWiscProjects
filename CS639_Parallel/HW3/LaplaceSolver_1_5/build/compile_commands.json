@@ -1,0 +1,44 @@
+[
+{
+  "directory": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_1_5/build",
+  "command": "/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/bin/intel64/icpc   -O3 -mavx512f -mkl -qopenmp -o CMakeFiles/Homework3.dir/ConjugateGradients.cpp.o -c /home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_1_5/ConjugateGradients.cpp",
+  "file": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_1_5/ConjugateGradients.cpp",
+  "output": "CMakeFiles/Homework3.dir/ConjugateGradients.cpp.o"
+},
+{
+  "directory": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_1_5/build",
+  "command": "/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/bin/intel64/icpc   -O3 -mavx512f -mkl -qopenmp -o CMakeFiles/Homework3.dir/Laplacian.cpp.o -c /home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_1_5/Laplacian.cpp",
+  "file": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_1_5/Laplacian.cpp",
+  "output": "CMakeFiles/Homework3.dir/Laplacian.cpp.o"
+},
+{
+  "directory": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_1_5/build",
+  "command": "/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/bin/intel64/icpc   -O3 -mavx512f -mkl -qopenmp -o CMakeFiles/Homework3.dir/main.cpp.o -c /home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_1_5/main.cpp",
+  "file": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_1_5/main.cpp",
+  "output": "CMakeFiles/Homework3.dir/main.cpp.o"
+},
+{
+  "directory": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_1_5/build",
+  "command": "/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/bin/intel64/icpc   -O3 -mavx512f -mkl -qopenmp -o CMakeFiles/Homework3.dir/MatVecMultiply.cpp.o -c /home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_1_5/MatVecMultiply.cpp",
+  "file": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_1_5/MatVecMultiply.cpp",
+  "output": "CMakeFiles/Homework3.dir/MatVecMultiply.cpp.o"
+},
+{
+  "directory": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_1_5/build",
+  "command": "/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/bin/intel64/icpc   -O3 -mavx512f -mkl -qopenmp -o CMakeFiles/Homework3.dir/PointwiseOps.cpp.o -c /home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_1_5/PointwiseOps.cpp",
+  "file": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_1_5/PointwiseOps.cpp",
+  "output": "CMakeFiles/Homework3.dir/PointwiseOps.cpp.o"
+},
+{
+  "directory": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_1_5/build",
+  "command": "/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/bin/intel64/icpc   -O3 -mavx512f -mkl -qopenmp -o CMakeFiles/Homework3.dir/Reductions.cpp.o -c /home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_1_5/Reductions.cpp",
+  "file": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_1_5/Reductions.cpp",
+  "output": "CMakeFiles/Homework3.dir/Reductions.cpp.o"
+},
+{
+  "directory": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_1_5/build",
+  "command": "/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/bin/intel64/icpc   -O3 -mavx512f -mkl -qopenmp -o CMakeFiles/Homework3.dir/Utilities.cpp.o -c /home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_1_5/Utilities.cpp",
+  "file": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_1_5/Utilities.cpp",
+  "output": "CMakeFiles/Homework3.dir/Utilities.cpp.o"
+}
+]

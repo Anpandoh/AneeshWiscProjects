@@ -1,0 +1,171 @@
+{
+	"kind" : "toolchains",
+	"toolchains" : 
+	[
+		{
+			"compiler" : 
+			{
+				"id" : "Intel",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/pstl/include",
+						"/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/ipp/include",
+						"/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/mkl/include",
+						"/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/tbb/include",
+						"/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/daal/include",
+						"/afs/cs.wisc.edu/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/compiler/include/icc",
+						"/afs/cs.wisc.edu/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/compiler/include",
+						"/usr/local/include",
+						"/usr/lib/gcc/x86_64-linux-gnu/11/include",
+						"/usr/include",
+						"/usr/include/x86_64-linux-gnu"
+					],
+					"linkDirectories" : 
+					[
+						"/afs/cs.wisc.edu/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/lib",
+						"/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/ipp/lib/intel64",
+						"/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin",
+						"/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin",
+						"/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64/gcc4.1",
+						"/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/daal/lib/intel64_lin",
+						"/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64_lin/gcc4.4",
+						"/afs/cs.wisc.edu/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin",
+						"/usr/lib/gcc/x86_64-linux-gnu/11",
+						"/usr/lib/x86_64-linux-gnu",
+						"/usr/lib64",
+						"/usr/lib",
+						"/lib/x86_64-linux-gnu",
+						"/lib64",
+						"/lib",
+						"/usr/lib/i386-linux-gnu"
+					],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : 
+					[
+						"imf",
+						"svml",
+						"irng",
+						"m",
+						"ipgo",
+						"decimal",
+						"cilkrts",
+						"stdc++",
+						"gcc",
+						"gcc_s",
+						"irc",
+						"svml",
+						"c",
+						"gcc",
+						"gcc_s",
+						"irc_s",
+						"dl",
+						"c"
+					]
+				},
+				"path" : "/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/bin/intel64/icc",
+				"version" : "19.0.5.20190815"
+			},
+			"language" : "C",
+			"sourceFileExtensions" : 
+			[
+				"c",
+				"m"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"id" : "Intel",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/pstl/include",
+						"/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/ipp/include",
+						"/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/mkl/include",
+						"/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/tbb/include",
+						"/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/daal/include",
+						"/afs/cs.wisc.edu/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/compiler/include/icc",
+						"/afs/cs.wisc.edu/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/compiler/include",
+						"/usr/include/c++/11",
+						"/usr/include/c++/11/backward",
+						"/usr/local/include",
+						"/usr/lib/gcc/x86_64-linux-gnu/11/include",
+						"/usr/include",
+						"/usr/include/x86_64-linux-gnu",
+						"/usr/include/x86_64-linux-gnu/c++/11"
+					],
+					"linkDirectories" : 
+					[
+						"/afs/cs.wisc.edu/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/mpi/intel64/libfabric/lib",
+						"/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/ipp/lib/intel64",
+						"/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin",
+						"/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/mkl/lib/intel64_lin",
+						"/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64/gcc4.1",
+						"/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/daal/lib/intel64_lin",
+						"/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/tbb/lib/intel64_lin/gcc4.4",
+						"/afs/cs.wisc.edu/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/compiler/lib/intel64_lin",
+						"/usr/lib/gcc/x86_64-linux-gnu/11",
+						"/usr/lib/x86_64-linux-gnu",
+						"/usr/lib64",
+						"/usr/lib",
+						"/lib/x86_64-linux-gnu",
+						"/lib64",
+						"/lib",
+						"/usr/lib/i386-linux-gnu"
+					],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : 
+					[
+						"imf",
+						"svml",
+						"irng",
+						"stdc++",
+						"m",
+						"ipgo",
+						"decimal",
+						"cilkrts",
+						"stdc++",
+						"gcc",
+						"gcc_s",
+						"irc",
+						"svml",
+						"c",
+						"gcc",
+						"gcc_s",
+						"irc_s",
+						"dl",
+						"c"
+					]
+				},
+				"path" : "/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/bin/intel64/icpc",
+				"version" : "19.0.5.20190815"
+			},
+			"language" : "CXX",
+			"sourceFileExtensions" : 
+			[
+				"C",
+				"M",
+				"c++",
+				"cc",
+				"cpp",
+				"cxx",
+				"mm",
+				"mpp",
+				"CPP",
+				"ixx",
+				"cppm",
+				"ccm",
+				"cxxm",
+				"c++m"
+			]
+		}
+	],
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}

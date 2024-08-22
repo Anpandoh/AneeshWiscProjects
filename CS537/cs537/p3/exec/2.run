@@ -1,0 +1,7 @@
+sleep 1.0 &
+sleep 1.1 &
+##sleep 0.2
+##assertStat S sleep 1.0
+##assertStat S sleep 1.1
+##sleep 1.5
+exit

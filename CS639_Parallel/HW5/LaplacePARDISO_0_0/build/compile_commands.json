@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/SparseDirect/LaplacePARDISO_0_0/build",
+  "command": "/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/bin/intel64/icpc   -O3 -mavx512f -mkl -g -g -qopenmp -o CMakeFiles/hw5.dir/Laplacian.cpp.o -c /home/pandoh/private/cs639_parallel/CS639S24_Demos/SparseDirect/LaplacePARDISO_0_0/Laplacian.cpp",
+  "file": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/SparseDirect/LaplacePARDISO_0_0/Laplacian.cpp",
+  "output": "CMakeFiles/hw5.dir/Laplacian.cpp.o"
+},
+{
+  "directory": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/SparseDirect/LaplacePARDISO_0_0/build",
+  "command": "/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/bin/intel64/icpc   -O3 -mavx512f -mkl -g -g -qopenmp -o CMakeFiles/hw5.dir/main.cpp.o -c /home/pandoh/private/cs639_parallel/CS639S24_Demos/SparseDirect/LaplacePARDISO_0_0/main.cpp",
+  "file": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/SparseDirect/LaplacePARDISO_0_0/main.cpp",
+  "output": "CMakeFiles/hw5.dir/main.cpp.o"
+},
+{
+  "directory": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/SparseDirect/LaplacePARDISO_0_0/build",
+  "command": "/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/bin/intel64/icpc   -O3 -mavx512f -mkl -g -g -qopenmp -o CMakeFiles/hw5.dir/DirectSolver.cpp.o -c /home/pandoh/private/cs639_parallel/CS639S24_Demos/SparseDirect/LaplacePARDISO_0_0/DirectSolver.cpp",
+  "file": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/SparseDirect/LaplacePARDISO_0_0/DirectSolver.cpp",
+  "output": "CMakeFiles/hw5.dir/DirectSolver.cpp.o"
+},
+{
+  "directory": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/SparseDirect/LaplacePARDISO_0_0/build",
+  "command": "/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/bin/intel64/icpc   -O3 -mavx512f -mkl -g -g -qopenmp -o CMakeFiles/hw5.dir/Utilities.cpp.o -c /home/pandoh/private/cs639_parallel/CS639S24_Demos/SparseDirect/LaplacePARDISO_0_0/Utilities.cpp",
+  "file": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/SparseDirect/LaplacePARDISO_0_0/Utilities.cpp",
+  "output": "CMakeFiles/hw5.dir/Utilities.cpp.o"
+}
+]

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Linux-g++"
+	BuildStamp="20240229-2330-Experimental"
+	Name="royal-15"
+	Generator="ctest-3.28.3"
+	CompilerName="/usr/bin/g++"
+	CompilerVersion="11.4.0"
+	OSName="Linux"
+	Hostname="royal-26"
+	OSRelease="5.15.0-97-generic"
+	OSVersion="#107-Ubuntu SMP Wed Feb 7 13:26:48 UTC 2024"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="167"
+	ProcessorCacheSize="12288"
+	NumberOfLogicalCPU="12"
+	NumberOfPhysicalCPU="6"
+	TotalVirtualMemory="8191"
+	TotalPhysicalMemory="15714"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2700"
+	>
+	<Testing>
+		<StartDateTime>Feb 29 17:30 CST</StartDateTime>
+		<StartTestTime>1709249457</StartTestTime>
+		<TestList/>
+		<EndDateTime>Feb 29 17:30 CST</EndDateTime>
+		<EndTestTime>1709249457</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

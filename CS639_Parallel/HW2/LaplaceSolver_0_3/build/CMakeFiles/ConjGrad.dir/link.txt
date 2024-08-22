@@ -1,0 +1,1 @@
+/usr/bin/g++ -O3 -mavx512f -g CMakeFiles/ConjGrad.dir/main.cpp.o CMakeFiles/ConjGrad.dir/ConjugateGradients.cpp.o CMakeFiles/ConjGrad.dir/Laplacian.cpp.o CMakeFiles/ConjGrad.dir/PointwiseOps.cpp.o CMakeFiles/ConjGrad.dir/Reductions.cpp.o CMakeFiles/ConjGrad.dir/Utilities.cpp.o -o ConjGrad  /usr/lib/gcc/x86_64-linux-gnu/11/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.a 

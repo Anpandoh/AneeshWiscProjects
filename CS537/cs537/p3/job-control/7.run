@@ -1,0 +1,26 @@
+sleep 10.0
+##sleep 0.2
+\x1A
+##sleep 0.2
+##assertStat T sleep 10.0
+sleep 10.1
+##sleep 0.2
+\x1A
+##sleep 0.2
+##assertStat T sleep 10.1
+sleep 10.2
+##sleep 0.2
+\x1A
+##sleep 0.2
+##assertStat T sleep 10.2
+jobs
+fg 3
+##assertStat S sleep 10.2
+\x03
+fg 2
+##assertStat S sleep 10.1
+\x03
+fg 1
+##assertStat S sleep 10.0
+\x03
+exit

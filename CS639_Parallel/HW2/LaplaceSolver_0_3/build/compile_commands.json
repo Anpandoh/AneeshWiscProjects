@@ -1,0 +1,38 @@
+[
+{
+  "directory": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_0_3/build",
+  "command": "/usr/bin/g++   -O3 -mavx512f -g -fopenmp -o CMakeFiles/ConjGrad.dir/main.cpp.o -c /home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_0_3/main.cpp",
+  "file": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_0_3/main.cpp",
+  "output": "CMakeFiles/ConjGrad.dir/main.cpp.o"
+},
+{
+  "directory": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_0_3/build",
+  "command": "/usr/bin/g++   -O3 -mavx512f -g -fopenmp -o CMakeFiles/ConjGrad.dir/ConjugateGradients.cpp.o -c /home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_0_3/ConjugateGradients.cpp",
+  "file": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_0_3/ConjugateGradients.cpp",
+  "output": "CMakeFiles/ConjGrad.dir/ConjugateGradients.cpp.o"
+},
+{
+  "directory": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_0_3/build",
+  "command": "/usr/bin/g++   -O3 -mavx512f -g -fopenmp -o CMakeFiles/ConjGrad.dir/Laplacian.cpp.o -c /home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_0_3/Laplacian.cpp",
+  "file": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_0_3/Laplacian.cpp",
+  "output": "CMakeFiles/ConjGrad.dir/Laplacian.cpp.o"
+},
+{
+  "directory": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_0_3/build",
+  "command": "/usr/bin/g++   -O3 -mavx512f -g -fopenmp -o CMakeFiles/ConjGrad.dir/PointwiseOps.cpp.o -c /home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_0_3/PointwiseOps.cpp",
+  "file": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_0_3/PointwiseOps.cpp",
+  "output": "CMakeFiles/ConjGrad.dir/PointwiseOps.cpp.o"
+},
+{
+  "directory": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_0_3/build",
+  "command": "/usr/bin/g++   -O3 -mavx512f -g -fopenmp -o CMakeFiles/ConjGrad.dir/Reductions.cpp.o -c /home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_0_3/Reductions.cpp",
+  "file": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_0_3/Reductions.cpp",
+  "output": "CMakeFiles/ConjGrad.dir/Reductions.cpp.o"
+},
+{
+  "directory": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_0_3/build",
+  "command": "/usr/bin/g++   -O3 -mavx512f -g -fopenmp -o CMakeFiles/ConjGrad.dir/Utilities.cpp.o -c /home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_0_3/Utilities.cpp",
+  "file": "/home/pandoh/private/cs639_parallel/CS639S24_Demos/LaplaceSolver/LaplaceSolver_0_3/Utilities.cpp",
+  "output": "CMakeFiles/ConjGrad.dir/Utilities.cpp.o"
+}
+]

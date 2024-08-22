@@ -1,0 +1,1216 @@
+starting build
+
+**********************************************************************
+
+Test build
+build xv6 using make
+
+**********************************************************************
+Trying to build project using make
+make xv6.img fs.img
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie -fno-pic -O -nostdinc -I. -c bootmain.c
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie -fno-pic -nostdinc -I. -c bootasm.S
+ld -m    elf_i386 -N -e start -Ttext 0x7C00 -o bootblock.o bootasm.o bootmain.o
+objdump -S bootblock.o > bootblock.asm
+objcopy -S -O binary -j .text bootblock.o bootblock
+./sign.pl bootblock
+boot block is 451 bytes (max 510)
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o bio.o bio.c
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o console.o console.c
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o exec.o exec.c
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o file.o file.c
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o fs.o fs.c
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o ide.o ide.c
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o ioapic.o ioapic.c
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o kalloc.o kalloc.c
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o kbd.o kbd.c
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o lapic.o lapic.c
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o log.o log.c
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o main.o main.c
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o mp.o mp.c
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o picirq.o picirq.c
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o pipe.o pipe.c
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o proc.o proc.c
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o sleeplock.o sleeplock.c
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o spinlock.o spinlock.c
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o string.o string.c
+gcc -m32 -gdwarf-2 -Wa,-divide   -c -o swtch.o swtch.S
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o syscall.o syscall.c
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o sysfile.o sysfile.c
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o sysproc.o sysproc.c
+gcc -m32 -gdwarf-2 -Wa,-divide   -c -o trapasm.o trapasm.S
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o trap.o trap.c
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o uart.o uart.c
+./vectors.pl > vectors.S
+gcc -m32 -gdwarf-2 -Wa,-divide   -c -o vectors.o vectors.S
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o vm.o vm.c
+gcc -m32 -gdwarf-2 -Wa,-divide   -c -o entry.o entry.S
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie -fno-pic -nostdinc -I. -c entryother.S
+ld -m    elf_i386 -N -e start -Ttext 0x7000 -o bootblockother.o entryother.o
+objcopy -S -O binary -j .text bootblockother.o entryother
+objdump -S bootblockother.o > entryother.asm
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie -nostdinc -I. -c initcode.S
+ld -m    elf_i386 -N -e start -Ttext 0 -o initcode.out initcode.o
+objcopy -S -O binary initcode.out initcode
+objdump -S initcode.o > initcode.asm
+ld -m    elf_i386 -T kernel.ld -o kernel entry.o bio.o console.o exec.o file.o fs.o ide.o ioapic.o kalloc.o kbd.o lapic.o log.o main.o mp.o picirq.o pipe.o proc.o sleeplock.o spinlock.o string.o swtch.o syscall.o sysfile.o sysproc.o trapasm.o trap.o uart.o vectors.o vm.o  -b binary initcode entryother
+objdump -S kernel > kernel.asm
+objdump -t kernel | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > kernel.sym
+dd if=/dev/zero of=xv6.img count=10000
+10000+0 records in
+10000+0 records out
+5120000 bytes (5.1 MB, 4.9 MiB) copied, 0.0397043 s, 129 MB/s
+dd if=bootblock of=xv6.img conv=notrunc
+1+0 records in
+1+0 records out
+512 bytes copied, 0.000218819 s, 2.3 MB/s
+dd if=kernel of=xv6.img seek=1 conv=notrunc
+292+1 records in
+292+1 records out
+149652 bytes (150 kB, 146 KiB) copied, 0.000993285 s, 151 MB/s
+gcc -Werror -Wall -o mkfs mkfs.c
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o ulib.o ulib.c
+gcc -m32 -gdwarf-2 -Wa,-divide   -c -o usys.o usys.S
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o printf.o printf.c
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o umalloc.o umalloc.c
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o cat.o cat.c
+ld -m    elf_i386 -N -e main -Ttext 0 -o _cat cat.o ulib.o usys.o printf.o umalloc.o
+objdump -S _cat > cat.asm
+objdump -t _cat | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > cat.sym
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o echo.o echo.c
+ld -m    elf_i386 -N -e main -Ttext 0 -o _echo echo.o ulib.o usys.o printf.o umalloc.o
+objdump -S _echo > echo.asm
+objdump -t _echo | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > echo.sym
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o forktest.o forktest.c
+# forktest has less library code linked in - needs to be small
+# in order to be able to max out the proc table.
+ld -m    elf_i386 -N -e main -Ttext 0 -o _forktest forktest.o ulib.o usys.o
+objdump -S _forktest > forktest.asm
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o grep.o grep.c
+ld -m    elf_i386 -N -e main -Ttext 0 -o _grep grep.o ulib.o usys.o printf.o umalloc.o
+objdump -S _grep > grep.asm
+objdump -t _grep | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > grep.sym
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o init.o init.c
+ld -m    elf_i386 -N -e main -Ttext 0 -o _init init.o ulib.o usys.o printf.o umalloc.o
+objdump -S _init > init.asm
+objdump -t _init | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > init.sym
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o kill.o kill.c
+ld -m    elf_i386 -N -e main -Ttext 0 -o _kill kill.o ulib.o usys.o printf.o umalloc.o
+objdump -S _kill > kill.asm
+objdump -t _kill | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > kill.sym
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o ln.o ln.c
+ld -m    elf_i386 -N -e main -Ttext 0 -o _ln ln.o ulib.o usys.o printf.o umalloc.o
+objdump -S _ln > ln.asm
+objdump -t _ln | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > ln.sym
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o ls.o ls.c
+ld -m    elf_i386 -N -e main -Ttext 0 -o _ls ls.o ulib.o usys.o printf.o umalloc.o
+objdump -S _ls > ls.asm
+objdump -t _ls | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > ls.sym
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o mkdir.o mkdir.c
+ld -m    elf_i386 -N -e main -Ttext 0 -o _mkdir mkdir.o ulib.o usys.o printf.o umalloc.o
+objdump -S _mkdir > mkdir.asm
+objdump -t _mkdir | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > mkdir.sym
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o rm.o rm.c
+ld -m    elf_i386 -N -e main -Ttext 0 -o _rm rm.o ulib.o usys.o printf.o umalloc.o
+objdump -S _rm > rm.asm
+objdump -t _rm | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > rm.sym
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o sh.o sh.c
+ld -m    elf_i386 -N -e main -Ttext 0 -o _sh sh.o ulib.o usys.o printf.o umalloc.o
+objdump -S _sh > sh.asm
+objdump -t _sh | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > sh.sym
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o stressfs.o stressfs.c
+ld -m    elf_i386 -N -e main -Ttext 0 -o _stressfs stressfs.o ulib.o usys.o printf.o umalloc.o
+objdump -S _stressfs > stressfs.asm
+objdump -t _stressfs | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > stressfs.sym
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o usertests.o usertests.c
+ld -m    elf_i386 -N -e main -Ttext 0 -o _usertests usertests.o ulib.o usys.o printf.o umalloc.o
+objdump -S _usertests > usertests.asm
+objdump -t _usertests | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > usertests.sym
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o wc.o wc.c
+ld -m    elf_i386 -N -e main -Ttext 0 -o _wc wc.o ulib.o usys.o printf.o umalloc.o
+objdump -S _wc > wc.asm
+objdump -t _wc | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > wc.sym
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o zombie.o zombie.c
+ld -m    elf_i386 -N -e main -Ttext 0 -o _zombie zombie.o ulib.o usys.o printf.o umalloc.o
+objdump -S _zombie > zombie.asm
+objdump -t _zombie | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > zombie.sym
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o test.o test.c
+ld -m    elf_i386 -N -e main -Ttext 0 -o _test test.o ulib.o usys.o printf.o umalloc.o
+objdump -S _test > test.asm
+objdump -t _test | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > test.sym
+./mkfs fs.img README _cat _echo _forktest _grep _init _kill _ln _ls _mkdir _rm _sh _stressfs _usertests _wc _zombie _test 
+nmeta 59 (boot, super, log blocks 30 inode blocks 26, bitmap blocks 1) blocks 941 total 1000
+balloc: first 493 blocks have been allocated
+balloc: write bitmap block at sector 58
+
+
+test build PASSED
+ (build xv6 using make)
+
+starting test_13
+
+**********************************************************************
+
+Test test_13
+Three process workload for scheduler graph
+
+**********************************************************************
+Running xv6 user progam /home/cs537-1/tests/P4/ctests/test_13.c
+Trying to build project using make
+make xv6.img fs.img
+/tmp/tmpdzvy6bs6/p/Makefile
+/tmp/tmpdzvy6bs6/p/Makefile.test
+make: 'xv6.img' is up to date.
+make: 'fs.img' is up to date.
+make qemu-nox CPUS=1
+gcc -fno-pic -static -fno-builtin -fno-strict-aliasing -O0 -Wall -MD -ggdb -m32 -Werror -fno-omit-frame-pointer -fno-stack-protector -fno-pie -no-pie   -c -o tester.o tester.c
+ld -m    elf_i386 -N -e main -Ttext 0 -o _tester tester.o ulib.o usys.o printf.o umalloc.o
+objdump -S _tester > tester.asm
+objdump -t _tester | sed '1,/SYMBOL TABLE/d; s/ .* / /; /^$/d' > tester.sym
+./mkfs fs.img README _cat _echo _forktest _grep _init _kill _ln _ls _tester _mkdir _rm _sh _stressfs _usertests _wc _zombie _test 
+nmeta 59 (boot, super, log blocks 30 inode blocks 26, bitmap blocks 1) blocks 941 total 1000
+balloc: first 518 blocks have been allocated
+balloc: write bitmap block at sector 58
+qemu-system-i386 -nographic -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 1 -m 512 
+c[?7l[2J[0mSeaBIOS (version 1.15.0-1)
+
+
+iPXE (https://ipxe.org) 00:03.0 CA00 PCI2.10 PnP PMM+1FF8B4A0+1FECB4A0 CA00
+Press Ctrl-B to configure iPXE (PCI 00:03.0)...                                                                               
+
+
+Booting from Hard Disk..xv6...
+cpu0: starting 0
+PROC: 1 | TICK: 1
+PROC: 1 | TICK: 1
+sb: size 1000 nblocks 941 ninodes 200 nlog 30 logstart 2 inodestart 32 bmap start 58
+PROC: 1 | TICK: 2
+PROC: 1 | TICK: 2
+PROC: 1 | TICK: 2
+PROC: 1 | TICK: 2
+PROC: 1 | TICK: 2
+PROC: 1 | TICK: 3
+PROC: 1 | TICK: 3
+PROC: 1 | TICK: 3
+PROC: 1 | TICK: 3
+PROC: 1 | TICK: 3
+PROC: 1 | TICK: 3
+PROC: 1 | TICK: 4
+PROC: 1 | TICK: 4
+PROC: 1 | TICK: 4
+PROC: 1 | TICK: 4
+PROC: 1 | TICK: 4
+PROC: 1 | TICK: 5
+PROC: 1 | TICK: 5
+PROC: 1 | TICK: 5
+PROC: 1 | TICK: 5
+PROC: 1 | TICK: 5
+PROC: 1 | TICK: 5
+PROC: 1 | TICK: 5
+PROC: 1 | TICK: 6
+init: starting sh
+PROC: 1 | TICK: 7
+PROC: 2 | TICK: 7
+PROC: 2 | TICK: 7
+PROC: 2 | TICK: 8
+PROC: 2 | TICK: 8
+PROC: 2 | TICK: 8
+PROC: 2 | TICK: 8
+PROC: 2 | TICK: 8
+PROC: 2 | TICK: 8
+PROC: 2 | TICK: 8
+PROC: 2 | TICK: 9
+PROC: 2 | TICK: 9
+PROC: 2 | TICK: 9
+PROC: 2 | TICK: 9
+PROC: 2 | TICK: 9
+PROC: 2 | TICK: 9
+PROC: 2 | TICK: 9
+PROC: 2 | TICK: 9
+PROC: 2 | TICK: 10
+PROC: 2 | TICK: 10
+$ tester
+tester
+PROC: 2 | TICK: 18
+PROC: 2 | TICK: 19
+PROC: 3 | TICK: 19
+PROC: 3 | TICK: 20
+PROC: 3 | TICK: 20
+PROC: 3 | TICK: 21
+PROC: 3 | TICK: 21
+PROC: 3 | TICK: 21
+PROC: 3 | TICK: 21
+PROC: 3 | TICK: 21
+PROC: 3 | TICK: 21
+SpinningPROC: 3 | TICK: 22
+...
+PROC: 4 | TICK: 23
+PROC: 3 | TICK: 24
+PROC: 4 | TICK: 25
+PROC: 5 | TICK: 26
+PROC: 6 | TICK: 27
+PROC: 3 | TICK: 28
+PROC: 4 | TICK: 28
+PROC: 5 | TICK: 29
+PROC: 6 | TICK: 30
+PROC: 7 | TICK: 31
+PROC: 3 | TICK: 32
+PROC: 4 | TICK: 32
+PROC: 5 | TICK: 33
+PROC: 6 | TICK: 34
+PROC: 7 | TICK: 35
+PROC: 3 | TICK: 36
+PROC: 4 | TICK: 36
+PROC: 5 | TICK: 37
+PROC: 6 | TICK: 38
+PROC: 7 | TICK: 39
+PROC: 3 | TICK: 40
+PROC: 4 | TICK: 40
+PROC: 5 | TICK: 41
+PROC: 6 | TICK: 42
+PROC: 7 | TICK: 43
+PROC: 3 | TICK: 44
+PROC: 4 | TICK: 44
+PROC: 5 | TICK: 45
+PROC: 6 | TICK: 46
+PROC: 7 | TICK: 47
+PROC: 3 | TICK: 48
+PROC: 4 | TICK: 48
+PROC: 5 | TICK: 49
+PROC: 6 | TICK: 50
+PROC: 7 | TICK: 51
+PROC: 3 | TICK: 52
+PROC: 4 | TICK: 52
+PROC: 5 | TICK: 53
+PROC: 6 | TICK: 54
+PROC: 7 | TICK: 55
+PROC: 3 | TICK: 56
+PROC: 4 | TICK: 56
+PROC: 5 | TICK: 57
+PROC: 6 | TICK: 58
+PROC: 7 | TICK: 59
+PROC: 3 | TICK: 60
+PROC: 4 | TICK: 60
+PROC: 5 | TICK: 61
+PROC: 6 | TICK: 62
+PROC: 7 | TICK: 63
+PROC: 3 | TICK: 64
+PROC: 4 | TICK: 64
+PROC: 5 | TICK: 65
+PROC: 6 | TICK: 66
+PROC: 7 | TICK: 67
+PROC: 3 | TICK: 68
+PROC: 4 | TICK: 68
+PROC: 5 | TICK: 69
+PROC: 6 | TICK: 70
+PROC: 7 | TICK: 71
+PROC: 3 | TICK: 72
+PROC: 4 | TICK: 72
+PROC: 5 | TICK: 73
+PROC: 6 | TICK: 74
+PROC: 7 | TICK: 75
+PROC: 3 | TICK: 76
+PROC: 4 | TICK: 76
+PROC: 5 | TICK: 77
+PROC: 6 | TICK: 78
+PROC: 7 | TICK: 78
+PROC: 3 | TICK: 79
+PROC: 4 | TICK: 79
+PROC: 5 | TICK: 79
+PROC: 6 | TICK: 80
+PROC: 7 | TICK: 80
+PROC: 3 | TICK: 81
+PROC: 4 | TICK: 81
+PROC: 5 | TICK: 81
+PROC: 6 | TICK: 82
+PROC: 7 | TICK: 82
+PROC: 3 | TICK: 83
+PROC: 4 | TICK: 83
+PROC: 5 | TICK: 83
+PROC: 6 | TICK: 84
+PROC: 7 | TICK: 84
+PROC: 3 | TICK: 85
+PROC: 4 | TICK: 85
+PROC: 5 | TICK: 85
+PROC: 6 | TICK: 86
+PROC: 7 | TICK: 86
+PROC: 3 | TICK: 87
+PROC: 4 | TICK: 87
+PROC: 5 | TICK: 87
+PROC: 6 | TICK: 88
+PROC: 7 | TICK: 88
+PROC: 3 | TICK: 89
+PROC: 4 | TICK: 89
+PROC: 5 | TICK: 89
+PROC: 6 | TICK: 90
+PROC: 7 | TICK: 90
+PROC: 3 | TICK: 91
+PROC: 4 | TICK: 91
+PROC: 5 | TICK: 91
+PROC: 6 | TICK: 92
+PROC: 7 | TICK: 92
+PROC: 3 | TICK: 93
+PROC: 4 | TICK: 93
+PROC: 5 | TICK: 93
+PROC: 6 | TICK: 94
+PROC: 7 | TICK: 94
+PROC: 3 | TICK: 95
+PROC: 4 | TICK: 95
+PROC: 5 | TICK: 95
+PROC: 6 | TICK: 96
+PROC: 7 | TICK: 96
+PROC: 3 | TICK: 97
+PROC: 4 | TICK: 97
+PROC: 5 | TICK: 97
+PROC: 6 | TICK: 98
+PROC: 7 | TICK: 98
+PROC: 3 | TICK: 99
+PROC: 4 | TICK: 99
+PROC: 5 | TICK: 99
+PROC: 6 | TICK: 100
+PROC: 7 | TICK: 100
+PROC: 3 | TICK: 101
+PROC: 4 | TICK: 101
+PROC: 5 | TICK: 101
+PROC: 6 | TICK: 102
+PROC: 7 | TICK: 102
+PROC: 3 | TICK: 103
+PROC: 4 | TICK: 103
+PROC: 5 | TICK: 103
+PROC: 6 | TICK: 104
+PROC: 7 | TICK: 104
+PROC: 3 | TICK: 105
+PROC: 4 | TICK: 105
+PROC: 5 | TICK: 105
+PROC: 6 | TICK: 106
+PROC: 7 | TICK: 106
+PROC: 3 | TICK: 107
+PROC: 4 | TICK: 107
+PROC: 5 | TICK: 107
+PROC: 6 | TICK: 108
+PROC: 7 | TICK: 108
+PROC: 3 | TICK: 109
+PROC: 4 | TICK: 109
+PROC: 5 | TICK: 109
+PROC: 6 | TICK: 110
+PROC: 7 | TICK: 110
+PROC: 3 | TICK: 111
+PROC: 4 | TICK: 111
+PROC: 5 | TICK: 111
+PROC: 6 | TICK: 112
+PROC: 7 | TICK: 112
+PROC: 3 | TICK: 113
+PROC: 4 | TICK: 113
+PROC: 5 | TICK: 113
+PROC: 6 | TICK: 114
+PROC: 7 | TICK: 114
+PROC: 3 | TICK: 115
+PROC: 4 | TICK: 115
+PROC: 5 | TICK: 115
+PROC: 6 | TICK: 116
+PROC: 7 | TICK: 116
+PROC: 3 | TICK: 117
+PROC: 4 | TICK: 117
+PROC: 5 | TICK: 117
+PROC: 6 | TICK: 118
+PROC: 7 | TICK: 118
+PROC: 3 | TICK: 119
+PROC: 4 | TICK: 119
+PROC: 5 | TICK: 119
+PROC: 6 | TICK: 120
+PROC: 7 | TICK: 120
+PROC: 3 | TICK: 121
+PROC: 4 | TICK: 121
+PROC: 5 | TICK: 121
+PROC: 6 | TICK: 122
+PROC: 7 | TICK: 122
+PROC: 3 | TICK: 123
+PROC: 4 | TICK: 123
+PROC: 5 | TICK: 123
+PROC: 6 | TICK: 124
+PROC: 7 | TICK: 124
+PROC: 3 | TICK: 125
+PROC: 4 | TICK: 125
+PROC: 5 | TICK: 125
+PROC: 6 | TICK: 126
+PROC: 7 | TICK: 126
+PROC: 3 | TICK: 127
+PROC: 4 | TICK: 127
+PROC: 5 | TICK: 127
+PROC: 6 | TICK: 128
+PROC: 7 | TICK: 129
+PROC: 3 | TICK: 130
+PROC: 4 | TICK: 130
+PROC: 5 | TICK: 131
+PROC: 6 | TICK: 132
+PROC: 7 | TICK: 133
+PROC: 3 | TICK: 134
+PROC: 4 | TICK: 134
+PROC: 5 | TICK: 135
+PROC: 6 | TICK: 136
+PROC: 7 | TICK: 137
+PROC: 3 | TICK: 138
+PROC: 4 | TICK: 138
+PROC: 5 | TICK: 139
+PROC: 6 | TICK: 140
+PROC: 7 | TICK: 141
+PROC: 3 | TICK: 142
+PROC: 4 | TICK: 142
+PROC: 5 | TICK: 143
+PROC: 6 | TICK: 144
+PROC: 7 | TICK: 145
+PROC: 3 | TICK: 146
+PROC: 4 | TICK: 146
+PROC: 5 | TICK: 147
+PROC: 6 | TICK: 148
+PROC: 7 | TICK: 149
+PROC: 3 | TICK: 150
+PROC: 4 | TICK: 150
+PROC: 5 | TICK: 151
+PROC: 6 | TICK: 152
+PROC: 7 | TICK: 153
+PROC: 3 | TICK: 154
+PROC: 4 | TICK: 154
+PROC: 5 | TICK: 155
+PROC: 6 | TICK: 156
+PROC: 7 | TICK: 157
+PROC: 3 | TICK: 158
+PROC: 4 | TICK: 158
+PROC: 5 | TICK: 159
+PROC: 6 | TICK: 160
+PROC: 7 | TICK: 161
+PROC: 3 | TICK: 162
+PROC: 4 | TICK: 162
+PROC: 5 | TICK: 163
+PROC: 6 | TICK: 164
+PROC: 7 | TICK: 165
+PROC: 3 | TICK: 166
+PROC: 4 | TICK: 166
+PROC: 5 | TICK: 167
+PROC: 6 | TICK: 168
+PROC: 7 | TICK: 169
+PROC: 3 | TICK: 170
+PROC: 4 | TICK: 170
+PROC: 5 | TICK: 171
+PROC: 6 | TICK: 172
+PROC: 7 | TICK: 173
+PROC: 3 | TICK: 174
+PROC: 4 | TICK: 174
+PROC: 5 | TICK: 175
+PROC: 6 | TICK: 176
+PROC: 7 | TICK: 177
+PROC: 3 | TICK: 178
+PROC: 4 | TICK: 178
+PROC: 5 | TICK: 179
+PROC: 6 | TICK: 180
+PROC: 7 | TICK: 180
+PROC: 3 | TICK: 181
+PROC: 4 | TICK: 181
+PROC: 5 | TICK: 182
+PROC: 6 | TICK: 183
+PROC: 7 | TICK: 183
+PROC: 3 | TICK: 184
+PROC: 4 | TICK: 184
+PROC: 5 | TICK: 184
+PROC: 6 | TICK: 185
+PROC: 7 | TICK: 185
+PROC: 3 | TICK: 186
+PROC: 4 | TICK: 186
+PROC: 5 | TICK: 186
+PROC: 6 | TICK: 187
+PROC: 7 | TICK: 187
+PROC: 3 | TICK: 188
+PROC: 4 | TICK: 188
+PROC: 5 | TICK: 188
+PROC: 6 | TICK: 189
+PROC: 7 | TICK: 189
+PROC: 3 | TICK: 190
+PROC: 4 | TICK: 190
+PROC: 5 | TICK: 190
+PROC: 6 | TICK: 191
+PROC: 7 | TICK: 191
+PROC: 3 | TICK: 192
+PROC: 4 | TICK: 192
+PROC: 5 | TICK: 192
+PROC: 6 | TICK: 193
+PROC: 7 | TICK: 193
+PROC: 3 | TICK: 194
+PROC: 4 | TICK: 194
+PROC: 5 | TICK: 194
+PROC: 6 | TICK: 195
+PROC: 7 | TICK: 195
+PROC: 3 | TICK: 196
+PROC: 4 | TICK: 196
+PROC: 5 | TICK: 196
+PROC: 6 | TICK: 197
+PROC: 7 | TICK: 197
+PROC: 3 | TICK: 198
+PROC: 4 | TICK: 198
+PROC: 5 | TICK: 198
+PROC: 6 | TICK: 199
+PROC: 7 | TICK: 199
+PROC: 3 | TICK: 200
+PROC: 4 | TICK: 200
+PROC: 5 | TICK: 200
+PROC: 6 | TICK: 201
+PROC: 7 | TICK: 201
+PROC: 3 | TICK: 202
+PROC: 4 | TICK: 202
+PROC: 5 | TICK: 202
+PROC: 6 | TICK: 203
+PROC: 7 | TICK: 203
+PROC: 3 | TICK: 204
+PROC: 4 | TICK: 204
+PROC: 5 | TICK: 204
+PROC: 6 | TICK: 205
+PROC: 7 | TICK: 205
+PROC: 3 | TICK: 206
+PROC: 4 | TICK: 206
+PROC: 5 | TICK: 206
+PROC: 6 | TICK: 207
+PROC: 7 | TICK: 207
+PROC: 3 | TICK: 208
+PROC: 4 | TICK: 208
+PROC: 5 | TICK: 208
+PROC: 6 | TICK: 209
+PROC: 7 | TICK: 209
+PROC: 3 | TICK: 210
+PROC: 4 | TICK: 210
+PROC: 5 | TICK: 210
+PROC: 6 | TICK: 211
+PROC: 7 | TICK: 211
+PROC: 3 | TICK: 212
+PROC: 4 | TICK: 212
+PROC: 5 | TICK: 212
+PROC: 6 | TICK: 213
+PROC: 7 | TICK: 213
+PROC: 3 | TICK: 214
+PROC: 4 | TICK: 214
+PROC: 5 | TICK: 214
+PROC: 6 | TICK: 215
+PROC: 7 | TICK: 215
+PROC: 3 | TICK: 216
+PROC: 4 | TICK: 216
+PROC: 5 | TICK: 216
+PROC: 6 | TICK: 217
+PROC: 7 | TICK: 217
+PROC: 3 | TICK: 218
+PROC: 4 | TICK: 218
+PROC: 5 | TICK: 218
+PROC: 6 | TICK: 219
+PROC: 7 | TICK: 219
+PROC: 3 | TICK: 220
+PROC: 4 | TICK: 220
+PROC: 5 | TICK: 220
+PROC: 6 | TICK: 221
+PROC: 7 | TICK: 221
+PROC: 3 | TICK: 222
+PROC: 4 | TICK: 222
+PROC: 5 | TICK: 222
+PROC: 6 | TICK: 223
+PROC: 7 | TICK: 223
+PROC: 3 | TICK: 224
+PROC: 4 | TICK: 224
+PROC: 5 | TICK: 225
+PROC: 6 | TICK: 226
+PROC: 7 | TICK: 226
+PROC: 3 | TICK: 227
+PROC: 4 | TICK: 227
+PROC: 5 | TICK: 227
+PROC: 6 | TICK: 228
+PROC: 7 | TICK: 228
+PROC: 3 | TICK: 229
+PROC: 4 | TICK: 229
+PROC: 5 | TICK: 229
+PROC: 6 | TICK: 230
+PROC: 7 | TICK: 231
+PROC: 3 | TICK: 232
+PROC: 4 | TICK: 232
+PROC: 5 | TICK: 232
+PROC: 6 | TICK: 233
+PROC: 7 | TICK: 234
+PROC: 3 | TICK: 235
+PROC: 4 | TICK: 235
+PROC: 5 | TICK: 236
+PROC: 6 | TICK: 237
+PROC: 7 | TICK: 238
+PROC: 3 | TICK: 239
+PROC: 4 | TICK: 239
+PROC: 5 | TICK: 240
+PROC: 6 | TICK: 241
+PROC: 7 | TICK: 242
+PROC: 3 | TICK: 243
+PROC: 4 | TICK: 243
+PROC: 5 | TICK: 244
+PROC: 6 | TICK: 245
+PROC: 7 | TICK: 246
+PROC: 3 | TICK: 247
+PROC: 4 | TICK: 247
+PROC: 5 | TICK: 248
+PROC: 6 | TICK: 249
+PROC: 7 | TICK: 250
+PROC: 3 | TICK: 251
+PROC: 4 | TICK: 251
+PROC: 5 | TICK: 252
+PROC: 6 | TICK: 253
+PROC: 7 | TICK: 254
+PROC: 3 | TICK: 255
+PROC: 4 | TICK: 255
+PROC: 5 | TICK: 256
+PROC: 6 | TICK: 257
+PROC: 7 | TICK: 258
+PROC: 3 | TICK: 259
+PROC: 4 | TICK: 259
+PROC: 5 | TICK: 260
+PROC: 6 | TICK: 261
+PROC: 7 | TICK: 262
+PROC: 3 | TICK: 263
+PROC: 4 | TICK: 263
+PROC: 5 | TICK: 264
+PROC: 6 | TICK: 265
+PROC: 7 | TICK: 266
+PROC: 3 | TICK: 267
+PROC: 4 | TICK: 267
+PROC: 5 | TICK: 268
+PROC: 6 | TICK: 269
+PROC: 7 | TICK: 270
+PROC: 3 | TICK: 271
+PROC: 4 | TICK: 271
+PROC: 5 | TICK: 272
+PROC: 6 | TICK: 273
+PROC: 7 | TICK: 274
+PROC: 3 | TICK: 275
+PROC: 4 | TICK: 275
+PROC: 5 | TICK: 276
+PROC: 6 | TICK: 277
+PROC: 7 | TICK: 278
+PROC: 3 | TICK: 279
+PROC: 4 | TICK: 279
+PROC: 5 | TICK: 280
+PROC: 6 | TICK: 281
+PROC: 7 | TICK: 281
+PROC: 3 | TICK: 282
+PROC: 4 | TICK: 282
+PROC: 5 | TICK: 283
+PROC: 6 | TICK: 284
+PROC: 7 | TICK: 284
+PROC: 3 | TICK: 285
+PROC: 4 | TICK: 285
+PROC: 5 | TICK: 286
+PROC: 6 | TICK: 287
+PROC: 7 | TICK: 287
+PROC: 3 | TICK: 288
+PROC: 4 | TICK: 288
+PROC: 5 | TICK: 288
+PROC: 6 | TICK: 289
+PROC: 7 | TICK: 289
+PROC: 3 | TICK: 290
+PROC: 4 | TICK: 290
+PROC: 5 | TICK: 290
+PROC: 6 | TICK: 291
+PROC: 7 | TICK: 291
+PROC: 3 | TICK: 292
+PROC: 4 | TICK: 292
+PROC: 5 | TICK: 292
+PROC: 6 | TICK: 293
+PROC: 7 | TICK: 293
+PROC: 3 | TICK: 294
+PROC: 4 | TICK: 294
+PROC: 5 | TICK: 294
+PROC: 6 | TICK: 295
+PROC: 7 | TICK: 295
+PROC: 3 | TICK: 296
+PROC: 4 | TICK: 296
+PROC: 5 | TICK: 296
+PROC: 6 | TICK: 297
+PROC: 7 | TICK: 297
+PROC: 3 | TICK: 298
+PROC: 4 | TICK: 298
+PROC: 5 | TICK: 298
+PROC: 6 | TICK: 299
+PROC: 7 | TICK: 299
+PROC: 3 | TICK: 300
+PROC: 4 | TICK: 300
+PROC: 5 | TICK: 300
+PROC: 6 | TICK: 301
+PROC: 7 | TICK: 301
+PROC: 3 | TICK: 302
+PROC: 4 | TICK: 302
+PROC: 5 | TICK: 302
+PROC: 6 | TICK: 303
+PROC: 7 | TICK: 303
+PROC: 3 | TICK: 304
+PROC: 4 | TICK: 304
+PROC: 5 | TICK: 304
+PROC: 6 | TICK: 305
+PROC: 7 | TICK: 305
+PROC: 3 | TICK: 306
+PROC: 4 | TICK: 306
+PROC: 5 | TICK: 306
+PROC: 6 | TICK: 307
+PROC: 7 | TICK: 307
+PROC: 3 | TICK: 308
+PROC: 4 | TICK: 308
+PROC: 5 | TICK: 308
+PROC: 6 | TICK: 309
+PROC: 7 | TICK: 309
+PROC: 3 | TICK: 310
+PROC: 4 | TICK: 310
+PROC: 5 | TICK: 310
+PROC: 6 | TICK: 311
+PROC: 7 | TICK: 311
+PROC: 3 | TICK: 312
+PROC: 4 | TICK: 312
+PROC: 5 | TICK: 312
+PROC: 6 | TICK: 313
+PROC: 7 | TICK: 313
+PROC: 3 | TICK: 314
+PROC: 4 | TICK: 314
+PROC: 5 | TICK: 314
+PROC: 6 | TICK: 315
+PROC: 7 | TICK: 315
+PROC: 3 | TICK: 316
+PROC: 4 | TICK: 316
+PROC: 5 | TICK: 316
+PROC: 6 | TICK: 317
+PROC: 7 | TICK: 317
+PROC: 3 | TICK: 318
+PROC: 4 | TICK: 318
+PROC: 5 | TICK: 318
+PROC: 6 | TICK: 319
+PROC: 7 | TICK: 319
+PROC: 3 | TICK: 320
+PROC: 4 | TICK: 320
+PROC: 5 | TICK: 320
+PROC: 6 | TICK: 321
+PROC: 7 | TICK: 321
+PROC: 3 | TICK: 322
+PROC: 4 | TICK: 322
+PROC: 5 | TICK: 322
+PROC: 6 | TICK: 323
+PROC: 7 | TICK: 323
+PROC: 3 | TICK: 324
+PROC: 4 | TICK: 324
+PROC: 5 | TICK: 324
+PROC: 6 | TICK: 325
+PROC: 7 | TICK: 325
+PROC: 3 | TICK: 326
+PROC: 4 | TICK: 326
+PROC: 5 | TICK: 326
+PROC: 6 | TICK: 327
+PROC: 7 | TICK: 327
+PROC: 3 | TICK: 328
+PROC: 4 | TICK: 328
+PROC: 5 | TICK: 328
+PROC: 6 | TICK: 329
+PROC: 7 | TICK: 329
+PROC: 3 | TICK: 330
+PROC: 4 | TICK: 330
+PROC: 5 | TICK: 330
+PROC: 6 | TICK: 331
+PROC: 7 | TICK: 332
+PROC: 3 | TICK: 333
+PROC: 4 | TICK: 333
+PROC: 5 | TICK: 333
+PROC: 6 | TICK: 334
+PROC: 7 | TICK: 335
+PROC: 3 | TICK: 336
+PROC: 4 | TICK: 336
+PROC: 5 | TICK: 336
+PROC: 6 | TICK: 337
+PROC: 7 | TICK: 338
+PROC: 3 | TICK: 339
+PROC: 4 | TICK: 339
+PROC: 5 | TICK: 340
+PROC: 6 | TICK: 341
+PROC: 7 | TICK: 342
+PROC: 3 | TICK: 343
+PROC: 4 | TICK: 343
+PROC: 5 | TICK: 344
+PROC: 6 | TICK: 345
+PROC: 7 | TICK: 346
+PROC: 3 | TICK: 347
+PROC: 4 | TICK: 347
+PROC: 5 | TICK: 348
+PROC: 6 | TICK: 349
+PROC: 7 | TICK: 350
+PROC: 3 | TICK: 351
+PROC: 4 | TICK: 351
+PROC: 5 | TICK: 352
+PROC: 6 | TICK: 353
+PROC: 7 | TICK: 354
+PROC: 3 | TICK: 355
+PROC: 4 | TICK: 355
+PROC: 5 | TICK: 356
+PROC: 6 | TICK: 357
+PROC: 7 | TICK: 358
+PROC: 3 | TICK: 359
+PROC: 4 | TICK: 359
+PROC: 5 | TICK: 360
+PROC: 6 | TICK: 361
+PROC: 7 | TICK: 362
+PROC: 3 | TICK: 363
+PROC: 4 | TICK: 363
+PROC: 5 | TICK: 364
+PROC: 6 | TICK: 365
+PROC: 7 | TICK: 366
+PROC: 3 | TICK: 367
+PROC: 4 | TICK: 367
+PROC: 5 | TICK: 368
+PROC: 6 | TICK: 369
+PROC: 7 | TICK: 370
+PROC: 3 | TICK: 371
+PROC: 4 | TICK: 371
+PROC: 5 | TICK: 372
+PROC: 6 | TICK: 373
+PROC: 7 | TICK: 374
+PROC: 3 | TICK: 375
+PROC: 4 | TICK: 375
+PROC: 5 | TICK: 376
+PROC: 6 | TICK: 377
+PROC: 7 | TICK: 377
+PROC: 3 | TICK: 378
+PROC: 4 | TICK: 378
+PROC: 5 | TICK: 379
+PROC: 6 | TICK: 380
+PROC: 7 | TICK: 380
+PROC: 3 | TICK: 381
+PROC: 4 | TICK: 381
+PROC: 5 | TICK: 382
+PROC: 6 | TICK: 383
+PROC: 7 | TICK: 383
+PROC: 3 | TICK: 384
+PROC: 4 | TICK: 384
+PROC: 5 | TICK: 385
+PROC: 6 | TICK: 386
+PROC: 7 | TICK: 386
+PROC: 3 | TICK: 387
+PROC: 4 | TICK: 387
+PROC: 5 | TICK: 388
+PROC: 6 | TICK: 389
+PROC: 7 | TICK: 389
+PROC: 3 | TICK: 390
+PROC: 4 | TICK: 390
+PROC: 5 | TICK: 390
+PROC: 6 | TICK: 391
+PROC: 7 | TICK: 391
+PROC: 3 | TICK: 392
+PROC: 4 | TICK: 392
+PROC: 5 | TICK: 392
+PROC: 6 | TICK: 393
+PROC: 7 | TICK: 393
+PROC: 3 | TICK: 394
+PROC: 4 | TICK: 394
+PROC: 5 | TICK: 394
+PROC: 6 | TICK: 395
+PROC: 7 | TICK: 395
+PROC: 3 | TICK: 396
+PROC: 4 | TICK: 396
+PROC: 5 | TICK: 396
+PROC: 6 | TICK: 397
+PROC: 7 | TICK: 397
+PROC: 3 | TICK: 398
+PROC: 4 | TICK: 398
+PROC: 5 | TICK: 398
+PROC: 6 | TICK: 399
+PROC: 7 | TICK: 399
+PROC: 3 | TICK: 400
+PROC: 4 | TICK: 400
+PROC: 5 | TICK: 400
+PROC: 6 | TICK: 401
+PROC: 7 | TICK: 401
+PROC: 3 | TICK: 402
+PROC: 4 | TICK: 402
+PROC: 5 | TICK: 402
+PROC: 6 | TICK: 403
+PROC: 7 | TICK: 403
+PROC: 3 | TICK: 404
+PROC: 4 | TICK: 404
+PROC: 5 | TICK: 404
+PROC: 6 | TICK: 405
+PROC: 7 | TICK: 405
+PROC: 3 | TICK: 406
+PROC: 4 | TICK: 406
+PROC: 5 | TICK: 406
+PROC: 6 | TICK: 407
+PROC: 7 | TICK: 407
+PROC: 3 | TICK: 408
+PROC: 4 | TICK: 408
+PROC: 5 | TICK: 408
+PROC: 6 | TICK: 409
+PROC: 7 | TICK: 409
+PROC: 3 | TICK: 410
+PROC: 4 | TICK: 410
+PROC: 5 | TICK: 410
+PROC: 6 | TICK: 411
+PROC: 7 | TICK: 411
+PROC: 3 | TICK: 412
+PROC: 4 | TICK: 412
+PROC: 5 | TICK: 412
+PROC: 6 | TICK: 413
+PROC: 7 | TICK: 413
+PROC: 3 | TICK: 414
+PROC: 4 | TICK: 414
+PROC: 5 | TICK: 414
+PROC: 6 | TICK: 415
+PROC: 7 | TICK: 415
+PROC: 3 | TICK: 416
+PROC: 4 | TICK: 416
+PROC: 5 | TICK: 416
+PROC: 6 | TICK: 417
+PROC: 7 | TICK: 417
+PROC: 3 | TICK: 418
+PROC: 4 | TICK: 418
+PROC: 5 | TICK: 418
+PROC: 6 | TICK: 419
+PROC: 7 | TICK: 419
+PROC: 3 | TICK: 420
+PROC: 4 | TICK: 420
+PROC: 5 | TICK: 420
+PROC: 6 | TICK: 421
+PROC: 7 | TICK: 421
+PROC: 3 | TICK: 422
+PROC: 4 | TICK: 422
+PROC: 5 | TICK: 422
+PROC: 6 | TICK: 423
+PROC: 7 | TICK: 423
+PROC: 3 | TICK: 424
+PROC: 4 | TICK: 424
+PROC: 5 | TICK: 424
+PROC: 6 | TICK: 425
+PROC: 7 | TICK: 425
+PROC: 3 | TICK: 426
+PROC: 4 | TICK: 426
+PROC: 5 | TICK: 426
+PROC: 6 | TICK: 427
+PROC: 7 | TICK: 428
+PROC: 3 | TICK: 429
+PROC: 4 | TICK: 429
+PROC: 5 | TICK: 429
+PROC: 6 | TICK: 430
+PROC: 7 | TICK: 431
+PROC: 3 | TICK: 432
+PROC: 4 | TICK: 432
+PROC: 5 | TICK: 432
+PROC: 6 | TICK: 433
+PROC: 7 | TICK: 434
+PROC: 3 | TICK: 435
+PROC: 4 | TICK: 435
+PROC: 5 | TICK: 435
+PROC: 6 | TICK: 436
+PROC: 7 | TICK: 437
+PROC: 3 | TICK: 438
+PROC: 4 | TICK: 438
+PROC: 5 | TICK: 438
+PROC: 6 | TICK: 439
+PROC: 7 | TICK: 440
+PROC: 3 | TICK: 441
+PROC: 4 | TICK: 441
+PROC: 5 | TICK: 442
+PROC: 6 | TICK: 443
+PROC: 7 | TICK: 444
+PROC: 3 | TICK: 445
+PROC: 4 | TICK: 445
+PROC: 5 | TICK: 446
+PROC: 6 | TICK: 447
+PROC: 7 | TICK: 448
+PROC: 3 | TICK: 449
+PROC: 4 | TICK: 449
+PROC: 5 | TICK: 450
+PROC: 6 | TICK: 451
+PROC: 7 | TICK: 452
+PROC: 3 | TICK: 453
+PROC: 4 | TICK: 453
+PROC: 5 | TICK: 454
+PROC: 6 | TICK: 455
+PROC: 7 | TICK: 456
+PROC: 3 | TICK: 457
+PROC: 4 | TICK: 457
+PROC: 5 | TICK: 458
+PROC: 6 | TICK: 459
+PROC: 7 | TICK: 460
+PROC: 3 | TICK: 461
+PROC: 4 | TICK: 461
+PROC: 5 | TICK: 462
+PROC: 6 | TICK: 463
+PROC: 7 | TICK: 464
+PROC: 3 | TICK: 465
+PROC: 4 | TICK: 465
+PROC: 5 | TICK: 466
+PROC: 6 | TICK: 467
+PROC: 7 | TICK: 468
+PROC: 3 | TICK: 469
+PROC: 4 | TICK: 469
+PROC: 5 | TICK: 470
+PROC: 6 | TICK: 471
+PROC: 7 | TICK: 472
+PROC: 3 | TICK: 473
+PROC: 4 | TICK: 473
+PROC: 5 | TICK: 474
+PROC: 6 | TICK: 475
+PROC: 7 | TICK: 475
+PROC: 3 | TICK: 476
+PROC: 4 | TICK: 476
+PROC: 5 | TICK: 477
+PROC: 6 | TICK: 478
+PROC: 7 | TICK: 478
+PROC: 3 | TICK: 479
+PROC: 4 | TICK: 479
+PROC: 5 | TICK: 480
+PROC: 6 | TICK: 481
+PROC: 7 | TICK: 481
+PROC: 3 | TICK: 482
+PROC: 4 | TICK: 482
+PROC: 5 | TICK: 483
+PROC: 6 | TICK: 484
+PROC: 7 | TICK: 484
+PROC: 3 | TICK: 485
+PROC: 4 | TICK: 485
+PROC: 5 | TICK: 486
+PROC: 6 | TICK: 487
+PROC: 7 | TICK: 487
+PROC: 3 | TICK: 488
+PROC: 4 | TICK: 488
+PROC: 5 | TICK: 489
+PROC: 6 | TICK: 490
+PROC: 7 | TICK: 490
+PROC: 3 | TICK: 491
+PROC: 4 | TICK: 491
+PROC: 5 | TICK: 491
+PROC: 6 | TICK: 492
+PROC: 7 | TICK: 492
+PROC: 3 | TICK: 493
+PROC: 4 | TICK: 493
+PROC: 5 | TICK: 493
+PROC: 6 | TICK: 494
+PROC: 7 | TICK: 494
+PROC: 3 | TICK: 495
+PROC: 4 | TICK: 495
+PROC: 5 | TICK: 495
+PROC: 6 | TICK: 496
+PROC: 7 | TICK: 496
+PROC: 3 | TICK: 497
+PROC: 4 | TICK: 497
+PROC: 5 | TICK: 497
+PROC: 6 | TICK: 498
+PROC: 7 | TICK: 498
+PROC: 3 | TICK: 499
+PROC: 4 | TICK: 499
+PROC: 5 | TICK: 499
+PROC: 6 | TICK: 500
+PROC: 7 | TICK: 500
+PROC: 3 | TICK: 501
+PROC: 4 | TICK: 501
+PROC: 5 | TICK: 501
+PROC: 6 | TICK: 502
+PROC: 7 | TICK: 502
+PROC: 3 | TICK: 503
+PROC: 4 | TICK: 503
+PROC: 5 | TICK: 503
+PROC: 6 | TICK: 504
+PROC: 7 | TICK: 504
+PROC: 3 | TICK: 505
+PROC: 4 | TICK: 505
+PROC: 5 | TICK: 505
+PROC: 6 | TICK: 506
+PROC: 7 | TICK: 506
+PROC: 3 | TICK: 507
+PROC: 4 | TICK: 507
+PROC: 5 | TICK: 507
+PROC: 6 | TICK: 508
+PROC: 7 | TICK: 508
+PROC: 3 | TICK: 509
+PROC: 4 | TICK: 509
+PROC: 5 | TICK: 509
+PROC: 6 | TICK: 510
+PROC: 7 | TICK: 510
+PROC: 3 | TICK: 511
+PROC: 4 | TICK: 511
+PROC: 5 | TICK: 511
+PROC: 6 | TICK: 512
+PROC: 7 | TICK: 512
+PROC: 3 | TICK: 513
+PROC: 4 | TICK: 513
+PROC: 5 | TICK: 513
+PROC: 6 | TICK: 514
+PROC: 7 | TICK: 514
+PROC: 3 | TICK: 515
+PROC: 4 | TICK: 515
+PROC: 5 | TICK: 515
+PROC: 6 | TICK: 516
+PROC: 7 | TICK: 516
+PROC: 3 | TICK: 517
+PROC: 4 | TICK: 517
+PROC: 5 | TICK: 517
+PROC: 6 | TICK: 518
+PROC: 7 | TICK: 518
+PROC: 3 | TICK: 519
+PROC: 4 | TICK: 519
+PROC: 5 | TICK: 519
+PROC: 6 | TICK: 520
+PROC: 7 | TICK: 520
+PROC: 3 | TICK: 521
+PROC: 4 | TICK: 521
+PROC: 5 | TICK: 521
+PROC: 6 | TICK: 522
+PROC: 7 | TICK: 522
+PROC: 3 | TICK: 523
+PROC: 4 | TICK: 523
+PROC: 5 | TICK: 523
+PROC: 6 | TICK: 524
+PROC: 7 | TICK: 524
+PROC: 3 | TICK: 525
+PROC: 4 | TICK: 525
+PROC: 5 | TICK: 525
+PROC: 6 | TICK: 526
+PROC: 7 | TICK: 527
+PROC: 3 | TICK: 528
+
+**** PInfo ****
+pid: 1 ticks: 0 priority: 0
+piPROC: 4 | TICK: 529
+PROC: 5 | TICK: 529
+PROC: 6 | TICK: 530
+PROC: 7 | TICK: 531
+PROC: 3 | TICK: 532
+d: 2 ticks: 0 priority: 0
+pid: 3 ticks: 0 priority: 0
+pid: 4 tickPROC: 4 | TICK: 533
+PROC: 5 | TICK: 533
+PROC: 6 | TICK: 534
+PROC: 7 | TICK: 535
+PROC: 3 | TICK: 536
+s: 0 priority: 0
+pid: 5 ticks: 0 priority: 0
+pid: 6 ticks: 0 pPROC: 4 | TICK: 537
+PROC: 5 | TICK: 537
+PROC: 6 | TICK: 538
+PROC: 7 | TICK: 539
+PROC: 3 | TICK: 540
+riority: 0
+pid: 7 ticks: 0 priority: 0
+PROC: 4 | TICK: 540
+PROC: 5 | TICK: 541
+PROC: 6 | TICK: 541
+PROC: 7 | TICK: 541
+PROC: 3 | TICK: 541
+PROC: 4 | TICK: 541
+PROC: 3 | TICK: 541
+NPROC: 3 | TICK: 542
+umber of processes in use 7
+XV6_SCHEDULER	 SUCCESS
+
+test test_13 PASSED (1 of 1)
+ (Three process workload for scheduler graph)
+
+**********************************************************************
+Summary:
+test build PASSED
+ (build xv6 using make)
+
+test test_13 PASSED (1 of 1)
+ (Three process workload for scheduler graph)
+
+Passed 2 of 2 tests.
+Overall 2 of 2
+Points 1 of 1

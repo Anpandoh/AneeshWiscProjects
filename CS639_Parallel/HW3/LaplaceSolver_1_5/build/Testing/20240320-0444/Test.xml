@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Linux-icpc"
+	BuildStamp="20240320-0444-Experimental"
+	Name="royal-29"
+	Generator="ctest-3.28.3"
+	CompilerName="/s/intelcompilers-2019/amd64_rhel6/compilers_and_libraries_2019.5.281/linux/bin/intel64/icpc"
+	CompilerVersion="19.0.5.20190815"
+	OSName="Linux"
+	Hostname="royal-09"
+	OSRelease="5.15.0-101-generic"
+	OSVersion="#111-Ubuntu SMP Tue Mar 5 20:16:58 UTC 2024"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="167"
+	ProcessorCacheSize="12288"
+	NumberOfLogicalCPU="12"
+	NumberOfPhysicalCPU="6"
+	TotalVirtualMemory="8191"
+	TotalPhysicalMemory="15714"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2700"
+	>
+	<Testing>
+		<StartDateTime>Mar 20 17:52 CDT</StartDateTime>
+		<StartTestTime>1710975160</StartTestTime>
+		<TestList/>
+		<EndDateTime>Mar 20 17:52 CDT</EndDateTime>
+		<EndTestTime>1710975160</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
